@@ -1,53 +1,53 @@
-# TaskManagement Görev Yönetimi API  
+# TaskManagement API  
 
-Bu proje, **Supabase** altyapısı ve **FastAPI** framework’ü kullanılarak geliştirilmiş bir Görev Yönetimi API uygulamasıdır.  
-Amaç, kullanıcıların kendi görevlerini oluşturabilmesi, listeleyebilmesi, güncelleyebilmesi ve silebilmesini sağlayan **güvenli ve modern bir backend çözümü** sunmaktır. 🚀  
+This project is a **Task Management API** built with **Supabase** as the backend infrastructure and **FastAPI** as the framework.  
+The goal is to provide a **secure and modern backend solution** that allows users to create, list, update, and delete their own tasks. 🚀  
 
 ---
 
-## ⚙️ Teknolojiler ve Bileşenler  
+## ⚙️ Technologies & Components  
 - **Python 3.9+**  
-- **FastAPI** → Modern, tip güvenli web framework  
-- **Supabase** → Postgres veritabanı, Auth, Storage, Realtime özellikleri  
-- **Supabase-Py** → Python için resmi Supabase istemcisi  
+- **FastAPI** → Modern, type-safe web framework  
+- **Supabase** → Postgres database, Auth, Storage, Realtime features  
+- **Supabase-Py** → Official Supabase client for Python  
 - **Uvicorn** → ASGI server  
 
 ---
 
-## 📝 İş Listesi (Task Breakdown)  
+## 📝 Task Breakdown  
 
-### 1. Supabase Yapılandırması  
-- Supabase projesi oluştur  
-- `tasks` tablosu oluştur  
-- RLS (Row Level Security) kuralları ekle  
-- JWT doğrulaması için Auth ayarlarını yap  
+### 1. Supabase Configuration  
+- Create a Supabase project  
+- Create a `tasks` table  
+- Add RLS (Row Level Security) rules  
+- Configure Auth for JWT validation  
 
-### 2. Backend Kurulumu  
-- `supabase-py` ve `fastapi` bağımlılıklarını yükle  
-- `.env` üzerinden Supabase bağlantısını ayarla  
-- FastAPI başlat (`Uvicorn` ile)  
+### 2. Backend Setup  
+- Install `supabase-py` and `fastapi` dependencies  
+- Configure Supabase connection via `.env`  
+- Start FastAPI (with `Uvicorn`)  
 
-### 3. CRUD Endpoint’leri  
-- `POST /tasks/` → Yeni görev oluşturma  
-- `GET /tasks/` → Kullanıcıya özel görevleri listeleme  
-- `PUT /tasks/{id}` → Görev güncelleme (örn. tamamlandı)  
-- `DELETE /tasks/{id}` → Görev silme  
+### 3. CRUD Endpoints  
+- `POST /tasks/` → Create a new task  
+- `GET /tasks/` → List user-specific tasks  
+- `PUT /tasks/{id}` → Update a task (e.g., mark as completed)  
+- `DELETE /tasks/{id}` → Delete a task  
 
-### 4. Kimlik Doğrulama & Güvenlik  
-- JWT token doğrulama mekanizması ekle  
-- Kullanıcı `user_id` bilgisini Supabase Auth’tan al  
-- Yanlış erişimlerde `403 Forbidden` döndür  
+### 4. Authentication & Security  
+- Add JWT token validation  
+- Retrieve `user_id` from Supabase Auth  
+- Return `403 Forbidden` on unauthorized access  
 
-### 5. Ekstra Özellikler (Opsiyonel)  
-- Görev kategorileri (örn. `work`, `personal`)  
-- Deadline tarihi (`due_date` alanı)  
-- Realtime desteği → görevlerin anlık güncellenmesi  
-- Görev ekine dosya yükleme (Supabase Storage)  
+### 5. Extra Features (Optional)  
+- Task categories (e.g., `work`, `personal`)  
+- Deadline field (`due_date`)  
+- Realtime support → live updates for tasks  
+- File attachment upload (Supabase Storage)  
 
 ---
 
-## 🎯 Hedef  
-Bu proje ile:  
-- Supabase veritabanı ve Auth modülünü Python’dan nasıl kullanacağını öğreneceksin,  
-- FastAPI ile REST API geliştirme pratiği kazanacaksın,  
-- CRUD ve güvenlik mekanizmalarıyla modern bir Görev Yönetimi API geliştirmiş olacaksın.  
+## 🎯 Goal  
+With this project you will:  
+- Learn how to use Supabase database and Auth module from Python,  
+- Gain practice in building REST APIs with FastAPI,  
+- Develop a modern Task Management API with CRUD and security mechanisms.  
